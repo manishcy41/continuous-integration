@@ -3,42 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frontend Webpage Template</title>
+    <title>Upgraded Frontend Template</title>
     
-    <!-- Link to external CSS stylesheet for styling -->
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Modern CSS Reset & Variable Tokens */
+        :root {
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --text-dark: #1f2937;
+            --bg-light: #f3f4f6;
+            --bg-white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Navigation Bar Layout */
+        navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--bg-white);
+            padding: 1rem 5%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero / Header Section */
+        header {
+            text-align: center;
+            padding: 4rem 1rem;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #1e3a8a;
+        }
+
+        /* Main Component Container Grid */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            flex: 1;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background-color: var(--bg-white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Upgraded Interactive Elements */
+        .cta-btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-1px);
+        }
+
+        /* Sticky Footer Layout */
+        footer {
+            background-color: #111827;
+            color: #9ca3af;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: auto;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Header Section -->
+    <!-- Upgraded Navigation Bar -->
+    <nav class="navbar" aria-label="Main Navigation">
+        <div class="logo">DevStudio</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Upgraded Header / Hero Section -->
     <header>
-        <h1>Welcome to My Frontend Project</h1>
-        <p>A clean, semantic HTML structure.</p>
+        <h1>Welcome to Your Upgraded Project</h1>
+        <p>A responsive layout packed with modern CSS styles.</p>
+        <button class="cta-btn" onclick="toggleMessage()">Get Started</button>
     </header>
 
-    <!-- Main Content Area -->
+    <!-- Main Content Area with Modern CSS Grid Layout -->
     <main>
-        <section id="about">
-            <h2>About This Layout</h2>
-            <p>This code uses semantic HTML5 tags like <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code> to improve SEO and accessibility.</p>
-        </section>
+        <div class="grid-container">
+            <!-- Card 1 -->
+            <section id="about" class="card">
+                <h2>About This Layout</h2>
+                <p>This code bundles internal layout styles so it works perfectly instantly inside any browser. It features customized typography tokens, flexible structures, and semantic containers.</p>
+            </section>
 
-        <section id="features">
-            <h2>Core Features</h2>
-            <ul>
-                <li>Responsive layout metadata included.</li>
-                <li>Clean separation of structure, style, and logic.</li>
-                <li>Ready to connect with CSS and JS.</li>
-            </ul>
-        </section>
+            <!-- Card 2 -->
+            <section id="features" class="card">
+                <h2>Core Upgrades</h2>
+                <p>Enjoy built-in CSS styling variables, structural responsiveness across screen types, functional flexbox navigation, and native CSS standard resets.</p>
+            </section>
+        </div>
     </main>
 
-    <!-- Footer Section -->
+    <!-- Sticky Footer Section -->
     <footer>
-        <p>&copy; 2026 Frontend Developer Template</p>
+        <p>&copy; 2026 Upgraded Frontend Template. Built for high performance.</p>
     </footer>
 
-    <!-- Link to external JavaScript file for interactivity -->
-    <script src="script.js"></script>
+    <!-- Interactive JavaScript Layer -->
+    <script>
+        function toggleMessage() {
+            alert("Welcome! The upgraded interactive script is running smoothly.");
+        }
+    </script>
 </body>
 </html>
